@@ -1,8 +1,8 @@
 # Descrição
 
-Neste exercício, você vai criar uma função que recebe informações sobre um Pokémon e retorna um objeto que o representa.
+Neste exercício, você terá que escrever uma função para calcular o faturamento de um dia de vendas de uma loja. 
 
-Objetivo desse exercício é praticar a criação de funções e objetos em JavaScript. 
+Objetivo: Praticar o uso de funções que aceitam um número variável de compras, cada uma contendo itens com nome e valor, em JavaScript.
 
 **Todas as alterações devem ser feitas nos arquivos já existentes**
 
@@ -10,29 +10,48 @@ Objetivo desse exercício é praticar a criação de funções e objetos em Java
 
 ## Instruções:
 
-1. Crie uma função chamada `criarPokemon` que aceita quatro argumentos: 
-  - nome (string), tipo (string), nivel (number) e hp (number).
-2. Dentro da função, crie um objeto vazio chamado pokemon.
-3. Adicione as seguintes propriedades ao objeto pokemon com base nos argumentos recebidos:
-  - `nome`: Nome do Pokémon (string).
-  - `tipo`: Tipo do Pokémon (string).
-  - `nivel`: Nível do Pokémon (number).
-  - `hp`: Pontos de vida do Pokémon (number).
-4. Retorne o objeto pokemon preenchido.
-5. Fora da função, chame `criarPokemon()` passando valores fictícios como argumentos e armazene o objeto resultante.
-6. Exiba o objeto resultante no console.
+1. Você vai criar uma função que calcula o faturamento gerado por um conjunto de compras, onde cada compra possui vários `itens` com `nome` e `valor`.
+2. Crie uma função chamada `calcularFaturamento` que aceita **qualquer quantidade de argumentos**, cada um representando uma compra.
+3. Cada argumento (compra) deve ser um objeto contendo:
+  - itens: Um array de objetos, onde cada objeto representa um item da compra e contém propriedades `nome` (string) e `valor` (number).
+4. Dentro da função, faça o seguinte:
+  - Para cada compra no array, calcule o gasto total somando os valores dos itens.
+ - Retorne o gasto total calculado.
+5. Teste a função chamando-a com diferentes compras e quantidades de argumentos e exiba o resultado.
 
-
-Exemplo de criação da função e chamada:
+Exemplo de uso da função:
 
 ```javascript
-function criarPokemon(nome, tipo, nivel, hp) {
-  ...
-}
+const compra1 = { itens: [
+{ nome: "Camiseta", valor: 30 },
+{ nome: "Calça", valor: 50 }
+]}
 
-const meuPokemon = criarPokemon("Pikachu", "Elétrico", 25, 80);
-console.log(meuPokemon);
+const compra2 = { itens: [
+{ nome: "Tênis", valor: 80 }
+]}
+
+const compra3 = { itens: [
+{ nome: "Livro", valor: 20 },
+{ nome: "Caneta", valor: 5 }
+]}
+
+const compra4 = { itens: [
+{ nome: "Caderno", valor: 15 }
+]}
+
+const compra5 =   { itens: [
+{ nome: "Lápis", valor: 2 }, 
+{ nome: "Borracha", valor: 3 }
+]}
+
+
+const faturamento1 = calcularFaturamento(compra1, compra2)
+
+const faturamento2 = calcularFaturamento(compra3, compra4, compra5)
+
+console.log(`Faturamento 1: R$${gasto1}`);
+console.log(`Faturamento 2: R$${gasto2}`);
 ```
 Dica: 
-
-- Use os argumentos passados para a função para preencher as propriedades do Pokémon.
+- Existe mais de uma maneira de resolver esse problema. Que tal testar as duas?
